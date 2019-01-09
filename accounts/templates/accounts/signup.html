@@ -1,0 +1,50 @@
+{% extends 'base.html' %}
+
+{% load staticfiles %}
+
+{% block content %}
+
+<div class="container pt-5">
+  <div class="pricing-header px-3 py-3 pt-md-5 pb-md-4 mx-auto text-center">
+    <h1 class="display-4">Sign Up!</h1>
+    <p class="lead">Membership to our store is FREE and as a member you get EXCLUSIVE deals and special
+    discounts all the time. What's not to like?</p>
+  </div>
+</div>
+
+<div class="container text-center">
+
+{% if error %}
+
+{{ error }}
+<br />
+<br />
+{% endif %}
+
+</div>
+
+<div class="container text-center">
+
+<form method="POST" action="{% url 'signup' %}">
+
+  {% csrf_token %}
+  Username:
+  <br />
+  <input type="text" name="username"/>
+  <br />
+  Password:
+  <br />
+  <input type="password" name="password1"/>
+  <br />
+  Confirm Password:
+  <br />
+  <input type="password" name="password2"/>
+  <br />
+  <br />
+  <input class="btn btn-primary" type="submit" value="Sign Up!">
+
+</form>
+
+</div>
+
+{% endblock %}

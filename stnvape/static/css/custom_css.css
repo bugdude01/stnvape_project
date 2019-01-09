@@ -1,0 +1,12 @@
+body {
+  background: url(/static/STN006.jpg);
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+
+}
+
+.mobile-margin {
+  margin-top: 80px;
+}
